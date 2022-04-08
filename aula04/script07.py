@@ -1,6 +1,5 @@
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
 
 # https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html
 from sklearn.decomposition import PCA

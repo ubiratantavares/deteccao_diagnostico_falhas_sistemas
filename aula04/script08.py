@@ -14,9 +14,15 @@ pca = PCA(n_components=9)
 
 pca.fit(X)
 
-# salvar  matriz CP
-matriz_cp = pca.transform(X) # escores das componentes principais
-cps = pd.DataFrame(matriz_cp)
-print(cps)
-with pd.ExcelWriter("../dataset/cps.xlsx") as writer:
-    cps.to_excel(writer)
+pcas = pd.DataFrame(pca.components_)
+print(pcas)
+
+# ordenacao pelo critério do maior score para a primeira componente principal
+pca1 = pd.DataFrame(np.round(pca.components_[0], 3))
+pca1['cp'] = pca1
+print(pca1)
+
+# ordenando de ordem decrescente
+value_pca = pca1.sort_values(by="cp", ascending=False)
+print(value_pca)
+
