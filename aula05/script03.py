@@ -13,7 +13,7 @@ dataset1 = pd.read_excel('../dataset/data_cancer.xlsx')
 x = pd.DataFrame(dataset1)
 
 dataset2 = pd.read_excel('../dataset/data_cancer1.xlsx')
-x1= pd.DataFrame(dataset2)
+x1 = pd.DataFrame(dataset2)
 
 
 
